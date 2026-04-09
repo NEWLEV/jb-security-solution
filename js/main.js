@@ -165,18 +165,79 @@
   // Submit
   const submitBtn = form.querySelector('[data-submit]');
   if (submitBtn) {
-    submitBtn.addEventListener('click', (e) => {
+    submitBtn.addEventListener('click', async (e) => {
       e.preventDefault();
-      // GA4 tracking
-      if (typeof gtag === 'function') {
-        gtag('event', 'form_submit', { event_category: 'Quote', event_label: 'quote_request' });
-        gtag('event', 'quote_request');
+      
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending...';
+
+      // Gather data
+      const formData = new FormData(form.closest('form'));
+      const data = Object.fromEntries(formData.entries());
+
+      try {
+        // Send to FormSubmit via AJAX
+        await fetch('https://formsubmit.co/ajax/info@jbsecuritysolution.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        // GA4 tracking
+        if (typeof gtag === 'function') {
+          gtag('event', 'form_submit', { event_category: 'Quote', event_label: 'quote_request' });
+          gtag('event', 'quote_request');
+        }
+
+        window.location.href = '/thank-you.html';
+      } catch (err) {
+        console.error('Form submission error:', err);
+        alert('There was an error sending your request. Please try again or call us directly.');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
       }
-      window.location.href = '/thank-you.html';
     });
   }
 
   updateProgress();
+})();
+
+/* ── Contact Form Handling ────────────────────────────────── */
+(function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Sending...';
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      await fetch('https://formsubmit.co/ajax/info@jbsecuritysolution.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'form_submit', { event_category: 'Contact', event_label: 'contact_form' });
+      }
+
+      window.location.href = '/thank-you.html';
+    } catch (err) {
+      console.error('Contact form error:', err);
+      alert('There was an error sending your message. Please try again or call us directly.');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+    }
+  });
 })();
 
 /* ── Chat Widget ──────────────────────────────────────────── */

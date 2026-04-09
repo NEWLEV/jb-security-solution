@@ -118,7 +118,9 @@
           <h3 class="mb-0-5 text-upper fs-1-8 text-white ls-tight">Send Us a Message</h3>
           <p class="text-muted mb-2 fs-0-9">We respond to all inquiries within 2 hours during business hours, and immediately for urgent security requests.</p>
 
-          <form id="contactForm" novalidate aria-label="Contact form">
+          <form id="contactForm" action="https://formsubmit.co/ajax/info@jbsecuritysolution.com" method="POST" novalidate aria-label="Contact form">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-row">
               <div class="form-group">
                 <label for="c-first">First Name <span aria-hidden="true">*</span></label>
@@ -154,7 +156,7 @@
               <label for="c-message">Message <span aria-hidden="true">*</span></label>
               <textarea id="c-message" name="message" class="form-control" rows="5" placeholder="Tell us about your security needs, event details, or questions..." required aria-required="true"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg w-100" onclick="if(typeof gtag==='function'){gtag('event','form_submit',{event_category:'Contact',event_label:'contact_form'});}">
+            <button type="submit" class="btn btn-primary btn-lg w-100">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               Send Message
             </button>
