@@ -44,6 +44,7 @@ img { max-width: 100%; height: auto; display: block; }
 a   { text-decoration: none; color: inherit; }
 ul  { list-style: none; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
+address { font-style: normal; }
 
 /* ── Typography ──────────────────────────────────────────── */
 h1, h2, h3, h4, h5, h6 {
@@ -75,6 +76,107 @@ p  { font-size: 1rem; color: var(--steel); line-height: 1.7; }
 .container-sm { max-width: 860px;  margin: 0 auto; padding: 0 2rem; }
 .section-pad  { padding: 100px 0; }
 .section-pad-sm { padding: 60px 0; }
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.text-orange { color: var(--orange) !important; }
+.text-white  { color: var(--white) !important; }
+.text-muted  { color: var(--text-muted) !important; }
+.text-steel  { color: var(--steel) !important; }
+
+
+.bg-navy     { background: var(--navy) !important; }
+.bg-midnight { background: var(--midnight) !important; }
+
+.mb-0-75 { margin-bottom: 0.75rem !important; }
+.mb-1 { margin-bottom: 1rem !important; }
+.mb-1-5 { margin-bottom: 1.5rem !important; }
+.mb-2 { margin-bottom: 2rem !important; }
+.mb-2-5 { margin-bottom: 2.5rem !important; }
+.mb-3 { margin-bottom: 3rem !important; }
+
+.m-0 { margin: 0 !important; }
+.mt-0 { margin-top: 0 !important; }
+
+.mt-0-5 { margin-top: 0.5rem !important; }
+
+.mt-1 { margin-top: 1rem !important; }
+.mt-1-25 { margin-top: 1.25rem !important; }
+.mt-2 { margin-top: 2rem !important; }
+.mt-2-5 { margin-top: 2.5rem !important; }
+
+.pos-rel { position: relative !important; }
+.pos-abs { position: absolute !important; }
+
+.br-lg { border-radius: var(--radius-lg) !important; }
+.sh-lg { box-shadow: var(--shadow-lg) !important; }
+
+.font-display { font-family: var(--font-display) !important; }
+.fw-900     { font-weight: 900 !important; }
+.text-upper  { text-transform: uppercase !important; }
+
+.v-align-mid { vertical-align: middle !important; }
+.d-inline    { display: inline !important; }
+.mr-0-5      { margin-right: 4px !important; }
+
+.p-3 { padding: 3rem !important; }
+.list-disc { list-style: disc !important; margin-left: 1.5rem !important; }
+
+.flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 1rem !important;
+}
+
+.d-flex { display: flex !important; }
+.gap-1  { gap: 1rem !important; }
+.wrap   { flex-wrap: wrap !important; }
+.w-100  { width: 100% !important; }
+.w-0    { width: 0 !important; }
+
+/* TRICKY STYLES */
+.border-top { border-top: 1px solid var(--border) !important; }
+.border-accent { border: 1px solid rgba(232, 118, 26, 0.25) !important; }
+.pt-150 { padding-top: 150px !important; }
+.ls-wide { letter-spacing: 0.1em !important; }
+.ls-tight { letter-spacing: 0.04em !important; }
+
+/* FONT SIZES */
+.fs-0-8 { font-size: 0.8rem !important; }
+.fs-0-85 { font-size: 0.85rem !important; }
+.fs-0-9 { font-size: 0.9rem !important; }
+.fs-1-1 { font-size: 1.1rem !important; }
+.fs-1-8 { font-size: 1.8rem !important; }
+.fs-2 { font-size: 2rem !important; }
+
+/* Custom Badge Overlay */
+.owner-badge {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(13, 27, 42, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 118, 26, 0.4);
+  border-radius: var(--radius);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.owner-badge-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+.owner-badge-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
 
 /* ── Buttons ─────────────────────────────────────────────── */
 .btn {
@@ -124,6 +226,7 @@ p  { font-size: 1rem; color: var(--steel); line-height: 1.7; }
   top: 0; left: 0; right: 0;
   z-index: 1000;
   background: rgba(13, 27, 42, 0.95);
+  -webkit-backdrop-filter: blur(16px);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   transition: all var(--transition);
@@ -418,6 +521,7 @@ p  { font-size: 1rem; color: var(--steel); line-height: 1.7; }
   background: rgba(27, 45, 69, 0.6);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 

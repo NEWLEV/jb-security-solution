@@ -176,8 +176,8 @@
   <a href="/about.html">About</a>
   <a href="/testimonials.html">Testimonials</a>
   <a href="/contact.html">Contact</a>
-  <a href="/free-quote.html" style="color:var(--orange);margin-top:1rem;">Get a Free Quote →</a>
-  <a href="tel:+17868593440" style="color:var(--steel);font-size:1.1rem;margin-top:.5rem;">(786) 859-3440</a>
+  <a href="/free-quote.html" class="text-orange mt-1">Get a Free Quote →</a>
+  <a href="tel:+17868593440" class="text-white mt-1">(786) 859-3440</a>
 </nav>
 
 <!-- ════════════════════ HERO ═══════════════════════════════ -->
@@ -189,7 +189,6 @@
     alt="Professional security guards on duty at a South Florida building entrance"
     width="1600" height="900"
     loading="eager"
-    fetchpriority="high"
   >
   <div class="hero-bg" aria-hidden="true"></div>
 
@@ -243,7 +242,7 @@
 </section>
 
 <!-- ════════════════════ SERVICES ═══════════════════════════ -->
-<section id="services" class="section-pad" style="background:var(--midnight);" aria-labelledby="services-heading">
+<section id="services" class="section-pad bg-midnight" aria-labelledby="services-heading">
   <div class="container">
     <div class="section-header anim-fade-up">
       <span class="section-label">What We Do</span>
@@ -336,24 +335,24 @@
 </section>
 
 <!-- ════════════════════ WHY J&B ════════════════════════════ -->
-<section class="section-pad" style="background:var(--navy);" aria-labelledby="why-heading">
+<section class="section-pad bg-navy" aria-labelledby="why-heading">
   <div class="container">
     <div class="why-split">
       <!-- Officer Portrait -->
-      <div class="anim-fade-up" style="position:relative;">
+      <div class="anim-fade-up pos-rel">
         <img
           src="/images/officer-portrait.jpg"
           alt="Jose &amp; Betty Rodriguez — Owners of J&amp;B Security Solutions"
           width="600" height="750"
           loading="lazy"
-          style="width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);"
+          class="br-lg sh-lg"
         >
         <!-- Floating credential badge -->
-        <div style="position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(13,27,42,0.92);backdrop-filter:blur(12px);border:1px solid rgba(232,118,26,0.4);border-radius:var(--radius);padding:0.85rem 1.25rem;display:flex;align-items:center;gap:0.75rem;">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--orange);flex-shrink:0;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="owner-badge">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-orange" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <div>
-            <div style="font-family:var(--font-display);font-weight:700;font-size:0.9rem;color:var(--white);letter-spacing:0.05em;">FL CLASS D &amp; G LICENSED</div>
-            <div style="font-size:0.75rem;color:var(--text-muted);">FDACS Certified Officers</div>
+            <div class="owner-badge-label">FL CLASS D &amp; G LICENSED</div>
+            <div class="owner-badge-sub">FDACS Certified Officers</div>
           </div>
         </div>
       </div>
@@ -361,7 +360,7 @@
       <!-- Stats -->
       <div class="anim-fade-up">
         <span class="section-label">By the Numbers</span>
-        <h2 id="why-heading" style="margin-bottom:2.5rem;">South Florida's<br>Security Standard</h2>
+        <h2 id="why-heading" class="mb-2-5">South Florida's<br>Security Standard</h2>
         <div class="stats-grid">
           <div class="stat-item">
             <span class="stat-number" data-count="500" data-suffix="+">0+</span>
@@ -385,7 +384,7 @@
       <!-- Differentiators -->
       <div class="anim-fade-up" data-delay="150">
         <span class="section-label">Why Choose Us</span>
-        <h2 style="margin-bottom:2rem;">What Sets J&B Apart</h2>
+        <h2 class="mb-2">What Sets J&B Apart</h2>
         <ul class="bullet-list">
           <li>
             <div class="bullet-icon" aria-hidden="true">
@@ -432,9 +431,9 @@
 <!-- ════════════════════ INDUSTRIES ═════════════════════════ -->
 <div class="industries-strip" id="industries" aria-labelledby="industries-heading">
   <div class="container">
-    <div class="section-header light" style="margin-bottom:2.5rem;">
-      <span class="section-label" style="color:var(--orange);">Industries We Serve</span>
-      <h2 id="industries-heading" style="color:var(--navy);">Security Solutions Across Every Sector</h2>
+    <div class="section-header light mb-2-5">
+      <span class="section-label text-orange">Industries We Serve</span>
+      <h2 id="industries-heading" class="text-navy">Security Solutions Across Every Sector</h2>
     </div>
     <div class="industries-grid">
       <div class="industry-item anim-fade-up">
@@ -486,14 +485,14 @@
         <span>Construction Sites</span>
       </div>
     </div>
-    <p style="text-align:center;margin-top:2rem;color:#5a6a7e;font-size:0.9rem;">
-      Don't see your industry? <a href="/contact.html" style="color:var(--orange);">Contact us</a> — we likely serve it.
+    <p class="mt-2 text-center text-muted">
+      Don't see your industry? <a href="/contact.html" class="text-orange">Contact us</a> — we likely serve it.
     </p>
   </div>
 </div>
 
 <!-- ════════════════════ REVIEWS ════════════════════════════ -->
-<section class="section-pad" style="background:var(--navy);" aria-labelledby="reviews-heading">
+<section class="section-pad bg-navy" aria-labelledby="reviews-heading">
   <div class="container">
     <div class="review-summary anim-fade-up">
       <span class="stars-large" aria-label="4.9 stars">★★★★★</span>
@@ -552,16 +551,16 @@
       </article>
     </div>
 
-    <div style="text-align:center;margin-top:2.5rem;">
+    <div class="mt-2-5 text-center">
       <a href="/testimonials.html" class="btn btn-ghost">Read More Reviews</a>
     </div>
   </div>
 </section>
 
 <!-- ════════════════════ SERVICE AREA ═══════════════════════ -->
-<section id="locations" class="section-pad" style="background:var(--midnight);" aria-labelledby="area-heading">
+<section id="locations" class="section-pad bg-midnight" aria-labelledby="area-heading">
   <div class="container">
-    <div class="why-split" style="gap:4rem;align-items:center;margin-bottom:3rem;">
+    <div class="why-split flex-center mb-3 gap-4">
       <div class="anim-fade-up">
         <span class="section-label">Coverage Area</span>
         <h2 id="area-heading">We Protect All of Miami-Dade &amp; Broward County</h2>
@@ -573,7 +572,7 @@
           alt="Miami-Dade and Broward County skyline — J&B Security coverage area"
           width="700" height="420"
           loading="lazy"
-          style="width:100%;height:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);"
+          class="br-lg sh-lg"
         >
       </div>
     </div>
@@ -599,11 +598,11 @@
       <span class="city-pill" role="listitem">Cutler Bay</span>
     </div>
 
-    <p style="text-align:center;color:var(--text-muted);font-size:0.9rem;margin-bottom:2.5rem;">
-      Don't see your city? We likely cover it — <a href="tel:+17868593440" style="color:var(--orange);">call us to confirm</a>.
+    <p class="mb-2-5 text-center text-muted">
+      Don't see your city? We likely cover it — <a href="tel:+17868593440" class="text-orange">call us to confirm</a>.
     </p>
 
-    <div style="text-align:center;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <div class="flex-center">
       <a href="/miami-security-services.html"   class="btn btn-ghost">Miami-Dade Security →</a>
       <a href="/broward-security-services.html" class="btn btn-ghost">Broward County Security →</a>
     </div>
@@ -611,7 +610,7 @@
 </section>
 
 <!-- ════════════════════ FAQ ═════════════════════════════════ -->
-<section class="section-pad" style="background:var(--navy);" aria-labelledby="faq-heading">
+<section class="section-pad bg-navy" aria-labelledby="faq-heading">
   <div class="container">
     <div class="section-header anim-fade-up">
       <span class="section-label">Common Questions</span>
@@ -710,10 +709,10 @@
 <!-- ════════════════════ CTA BANNER ═════════════════════════ -->
 <section class="cta-banner" aria-labelledby="cta-heading">
   <div class="container">
-    <span class="section-label" style="margin-bottom:0.75rem;">Take the Next Step</span>
+    <span class="section-label mb-0-75">Take the Next Step</span>
     <h2 id="cta-heading">Ready to Secure Your Event,<br>Facility, or Team?</h2>
     <p>Contact us for a free, no-obligation security assessment. We respond within 2 hours — 24 hours a day, 7 days a week.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <div class="flex-center">
       <a href="/free-quote.html" class="btn btn-primary btn-lg" id="home-cta-bottom">Request a Free Consultation</a>
       <a href="tel:+17868593440" class="btn btn-ghost btn-lg">Call 24/7: (786) 859-3440</a>
     </div>
@@ -728,11 +727,11 @@
       <div class="footer-logo">
         <img src="/images/logo.png" alt="J&B Security Solutions logo" loading="lazy" >
         <div class="nav-logo-text">
-          <span class="brand" style="font-family:var(--font-display);font-weight:900;text-transform:uppercase;">J&amp;B Security Solutions</span>
+          <span class="brand font-display fw-900 text-upper">J&amp;B Security Solutions</span>
         </div>
       </div>
       <p class="footer-tagline">Protecting South Florida — 24/7</p>
-      <address class="footer-address" style="font-style:normal;">
+      <address class="footer-address">
         Miramar, FL 33027<br>
         Broward County, Florida
       </address>
@@ -780,7 +779,7 @@
         <span class="footer-city-tag">Davie</span>
       </div>
       <div class="footer-license">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline;vertical-align:middle;margin-right:4px;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="d-inline v-align-mid mr-0-5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Licensed &amp; Insured — Florida Class D &amp; G
       </div>
     </div>
