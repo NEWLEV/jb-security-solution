@@ -173,7 +173,8 @@
       submitBtn.innerHTML = 'Sending...';
 
       // Gather data
-      const formData = new FormData(form.closest('form'));
+      const actualForm = form.querySelector('form');
+      const formData = new FormData(actualForm);
       const data = Object.fromEntries(formData.entries());
 
       try {
