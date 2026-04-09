@@ -1,9 +1,9 @@
-# J&B Security Solutions — jbsecuritysolutions.com
+# J&B Security Solutions — jbsecuritysolution.com
 # Professional Security Guard Company | Miramar, FL | Miami-Dade & Broward County
 
 ## Project Overview
 Full 12-page static website for J&B Security Solutions.
-Hosted at: jbsecuritysolutions.com
+Hosted at: jbsecuritysolution.com
 Built with: HTML5, Vanilla CSS, Vanilla JavaScript
 
 ---
