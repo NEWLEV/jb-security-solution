@@ -13,6 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
+// Honeypot check
+if (!empty($_POST['_honey'])) {
+    // It's a bot
+    echo json_encode(["status" => "success", "message" => "Message processed."]);
+    exit;
+}
+
 // Configuration
 $to_email = "info@jbsecuritysolution.com";
 $from_email = "info@jbsecuritysolution.com"; // Use a real domain-based email as sender
