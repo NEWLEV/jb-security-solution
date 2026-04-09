@@ -175,15 +175,15 @@
       // Gather data
       const actualForm = form.querySelector('form');
       const formData = new FormData(actualForm);
-      const data = Object.fromEntries(formData.entries());
 
       try {
-        // Send to FormSubmit via AJAX
-        await fetch('https://formsubmit.co/ajax/info@jbsecuritysolution.com', {
+        // Send to local PHP handler
+        const response = await fetch('/contact-form.php', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(data)
+          body: formData
         });
+
+        if (!response.ok) throw new Error('Server responded with ' + response.status);
 
         // GA4 tracking
         if (typeof gtag === 'function') {
@@ -218,14 +218,14 @@
     submitBtn.innerHTML = 'Sending...';
 
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
 
     try {
-      await fetch('https://formsubmit.co/ajax/info@jbsecuritysolution.com', {
+      const response = await fetch('/contact-form.php', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
+        body: formData
       });
+
+      if (!response.ok) throw new Error('Server responded with ' + response.status);
 
       if (typeof gtag === 'function') {
         gtag('event', 'form_submit', { event_category: 'Contact', event_label: 'contact_form' });
