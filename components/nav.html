@@ -1,0 +1,80 @@
+<!-- ╔══════════════════════════════════════════════════════════════╗
+     ║  J&B SECURITY SOLUTIONS — SHARED NAVIGATION COMPONENT       ║
+     ║  Copy this <nav> block into every page                       ║
+     ╚══════════════════════════════════════════════════════════════╝ -->
+
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="/index.html" class="nav-logo" aria-label="J&B Security Solutions Home">
+      <img src="/images/logo.png" alt="J&B Security Solutions shield eagle logo" width="50" height="50">
+      <div class="nav-logo-text">
+        <span class="brand">J&amp;B Security</span>
+        <span class="tagline">Solutions</span>
+      </div>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="nav-links" role="list">
+      <a href="/index.html" role="listitem">Home</a>
+
+      <div class="dropdown" role="listitem">
+        <a href="#services" aria-haspopup="true">Services ▾</a>
+        <div class="dropdown-menu" role="menu">
+          <a href="/healthcare-security.html" role="menuitem">Healthcare Security</a>
+          <a href="/event-security.html"      role="menuitem">Event Security</a>
+          <a href="/sporting-event-security.html" role="menuitem">Sporting Events</a>
+          <a href="/secure-transport.html"    role="menuitem">Secure Transport</a>
+          <a href="/industries.html"          role="menuitem">All Industries</a>
+        </div>
+      </div>
+
+      <div class="dropdown" role="listitem">
+        <a href="#locations" aria-haspopup="true">Locations ▾</a>
+        <div class="dropdown-menu" role="menu">
+          <a href="/miami-security-services.html"   role="menuitem">Miami Security</a>
+          <a href="/broward-security-services.html" role="menuitem">Broward Security</a>
+        </div>
+      </div>
+
+      <a href="/about.html"        role="listitem">About</a>
+      <a href="/testimonials.html" role="listitem">Testimonials</a>
+      <a href="/contact.html"      role="listitem">Contact</a>
+    </div>
+
+    <!-- Nav Right -->
+    <div class="nav-right">
+      <a href="tel:+17868593440" class="nav-phone" aria-label="Call J&B Security Solutions">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.0 1.18 2 2 0 012 .0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.27 6.27l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+        </svg>
+        (786) 859-3440
+      </a>
+      <a href="/free-quote.html" class="btn btn-primary btn-sm">Get a Free Quote</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div><!-- /nav-inner -->
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="/index.html">Home</a>
+  <a href="/healthcare-security.html">Healthcare Security</a>
+  <a href="/event-security.html">Event Security</a>
+  <a href="/sporting-event-security.html">Sporting Event Security</a>
+  <a href="/secure-transport.html">Secure Transport</a>
+  <a href="/industries.html">Industries</a>
+  <a href="/miami-security-services.html">Miami Security</a>
+  <a href="/broward-security-services.html">Broward Security</a>
+  <a href="/about.html">About Us</a>
+  <a href="/testimonials.html">Testimonials</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/free-quote.html" style="color: var(--orange); margin-top: 1rem;">Get a Free Quote →</a>
+  <a href="tel:+17868593440" style="color: var(--steel); font-size: 1.1rem; margin-top: 0.5rem;">(786) 859-3440</a>
+</nav>

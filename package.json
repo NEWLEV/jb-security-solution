@@ -1,0 +1,15 @@
+{
+  "name": "jb-security-solutions",
+  "version": "1.0.0",
+  "description": "J&B Security Solutions static website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "static-server . -p 8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "static-server": "^2.2.1"
+  }
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow conversion confirmation page (not needed in search index)
+Disallow: /thank-you.html
+
+# Sitemap location
+Sitemap: https://jbsecuritysolutions.com/sitemap.xml
