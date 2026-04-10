@@ -31,14 +31,14 @@ $sender_email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS);
 
 // Quote specific fields
-$security_type = $_POST['security_type'] ?? '';
+$security_type = isset($_POST['service']) ? (is_array($_POST['service']) ? implode(', ', $_POST['service']) : $_POST['service']) : ($_POST['security_type'] ?? '');
 $event_date = $_POST['event_date'] ?? '';
-$details = $_POST['details'] ?? $_POST['message'] ?? 'No details provided.';
+$details = $_POST['notes'] ?? $_POST['message'] ?? 'No details provided.';
 
 // Determine subject
-$subject_prefix = isset($_POST['security_type']) ? "[Quote Request]" : "[Contact Form]";
-$form_subject = $_POST['subject'] ?? 'New Inquiry';
-$subject = $subject_prefix . " " . $form_subject . " from " . $first_name . " " . $last_name;
+$subject_prefix = (!empty($event_date) || !empty($security_type)) ? "[Quote Request]" : "[Contact Form]";
+$form_subject = !empty($_POST['subject']) ? " - " . $_POST['subject'] : '';
+$subject = $subject_prefix . $form_subject . " from " . $first_name . " " . $last_name;
 
 // Build Message Body
 $body = "====================================================\n";
@@ -50,13 +50,17 @@ $body .= "Name: $first_name $last_name\n";
 $body .= "Email: $sender_email\n";
 $body .= "Phone: $phone\n\n";
 
-if (isset($_POST['security_type'])) {
+if (!empty($event_date) || !empty($security_type)) {
     $body .= "Service Requirements:\n";
     $body .= "---------------------\n";
-    $body .= "Type: $security_type\n";
-    $body .= "Date: $event_date\n";
-    $body .= "Location: " . ($_POST['event_city'] ?? 'N/A') . "\n";
-    $body .= "Venue: " . ($_POST['event_venue'] ?? 'N/A') . "\n\n";
+    $body .= "Services Requested: " . ($security_type ?: 'Not specified') . "\n";
+    $body .= "Date: " . ($event_date ?: 'Not specified') . "\n";
+    $body .= "Location: " . ($_POST['event_city'] ?? 'Not specified') . "\n";
+    $body .= "Venue: " . ($_POST['event_venue'] ?? 'Not specified') . "\n";
+    $body .= "Duration: " . ($_POST['event_duration'] ?? 'Not specified') . "\n";
+    $body .= "Guard Count: " . ($_POST['guard_count'] ?? 'Not specified') . "\n";
+    $body .= "Armed/Unarmed: " . ($_POST['armed'] ?? 'Not specified') . "\n";
+    $body .= "Attendance: " . ($_POST['attendance'] ?? 'Not specified') . "\n\n";
 }
 
 $body .= "Message/Details:\n";
