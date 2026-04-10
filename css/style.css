@@ -78,6 +78,7 @@ p  { font-size: 1rem; color: var(--steel); line-height: 1.7; }
 .section-pad-sm { padding: 60px 0; }
 
 /* ── Utility Classes ─────────────────────────────────────── */
+.d-none { display: none !important; }
 .text-orange { color: var(--orange) !important; }
 .text-white  { color: var(--white) !important; }
 .text-muted  { color: var(--text-muted) !important; }
